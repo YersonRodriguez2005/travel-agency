@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contenedor del slider */
+.container-slider {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    height: 480px;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.container-slider h1,
+.container-slider h2,
+.container-slider h3 {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+}
+
+.container-slider h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0.5em 0;
+    color: #2B9CD3;
+}
+
+.container-slider h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0.5em 0;
+}
+
+.container-slider h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0.5em 0;
+}
+
+/* Enlaces de paquetes y contacto */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.info a {
+    padding: 10px 20px;
+    background-color: #2B9CD3;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.info a:hover {
+    background-color: rgb(0, 75, 150);
+}
+
+/* Tarjetas de población */
+.population {
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.333% - 20px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.card button {
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #2B9CD3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: rgb(0, 75, 150);
+}
+
+/* Reseñas */
+.reseñas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.reseña {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.333% - 20px);
+}
+
+.reseña img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.reseña h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.reseña p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info p {
+    margin: 10px 0;
+}
+
+.footer-info a {
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 15px;
+}
+
+.footer-social a {
+    color: #2B9CD3;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: rgb(0, 75, 150);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    color: rgb(0, 75, 150);
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Desenfocar fondo cuando el modal está activo */
+.show-modal .container {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards, .reseñas {
+        flex-direction: column;
+    }
+
+    .card, .reseña {
+        width: 100%;
+    }
+}
